@@ -3,7 +3,7 @@
 // @name            IITC plugin: Fan Fields 2
 // @author          Heistergand
 // @category        Layer
-// @version         2.1.9.1
+// @version         2.1.9.2
 // @description     Calculate how to link the portals to create the largest tidy set of nested fields. Enable from the layer chooser.
 // @include         https://intel.ingress.com/*
 // @match           https://intel.ingress.com/*
@@ -18,8 +18,11 @@
 
 /*
 Version History:
+2.1.9.2 (zysfryar)
+FIX:  Compatibility with Android - Removed mention of ARCS
+
 2.1.9.1 (zysfryar)
-Fixed blank in header for compatibility with IITC-CE Button.
+FIX:  Compatibility with IITC-CE Button - Removed blank line in header for.
 
 2.1.9 (bryane50)
 Fix for missing constants in leaflet verion 1.6.0. 
@@ -101,7 +104,6 @@ Add a kind of system to have a cluster of Fanfields
 Calculate distance to walk for the plan (crow / streets)
 Calculate the most efficient possible plan based on ways to walk and keys to farm
 Export to Drawtools
-Export to Arcs
 Export to Tasks
 Bookmarks saving works, but let it also save into a Bookmarks Folder
 Calculate amount of possible rebuilds after flippinig the center portal
@@ -260,9 +262,6 @@ function wrapper(plugin_info) {
         });
     }
 
-    thisplugin.exportArcs = function() {
-        //todo...
-    }
 
     thisplugin.exportTasks = function() {
         //todo...
